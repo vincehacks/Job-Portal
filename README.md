@@ -6,4 +6,4 @@ from: Front End Engineer and a UI Architect. I am using Handlebars as a template
 to display any number of jobs which have a job title and job description.
 Backbone logic is implemented to display HTML/CSS/JS.
 
-<img src="https://media.giphy.com/media/69sNAInB11ONmgBhPm/giphy.gif" width="900px" height="500px"/>
+<img src="https://media.giphy.com/media/69sNAInB11ONmgBhPm/giphy.gif" width="600px" height="600px"/>
