@@ -1,0 +1,95 @@
+<!-- Created by Vince Chang -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Macy's Jobs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <script type="text/template" id="job-template">
+        <div class="job-info">
+          <div>
+            <h1 class="job-title">{{job-title}}<h1>
+          </div>
+          <h5>Job Overview</h5>
+          <p>{{job-description}}</p>
+          <h5>Company Profile</h5>
+          <p>As the fastest growing part of Macy's Inc. business, macys.com is
+            achieving record sales and broadening our workforce. Macys.com
+            offers the entrepreneurial culture of a web business with the
+            stability and support of the best brand in retailing. Creativity and
+            ingenuity partner with business acumen and tech savvy to build a
+            unique business poised for substantial growth. If you're interested
+            in being a part of that growth and want to know what it's really
+            like to work at macys.com, get an inside look at
+            http://ecommerce.macysjobs.com/</p>
+          <p>Our employees have long-term opportunities and are encouraged to
+            utilize their Supervisors and Human Resources for cross-functional
+            movement to further their careers. At macys.com we are committed to
+            giving back to the community by partnering with local charitable
+            organizations. By skillfully combining the power of digital
+            technology and omnichannel integration with the best in retailing,
+            macys.com is reaching new heights.</p>
+        </div>
+        <form class="form-signin">
+          <h5>Job Application</h5>
+          <input name="Full Name" type="text" class="form-control" placeholder="Full Name" required>
+          <input name="Address" type="text" class="form-control" placeholder="Street Address" required>
+          <input name="City" type="text" class="form-control" placeholder="City" required>
+          <input name="Zip" type="text" class="form-control" placeholder="Zip Code" required maxlength="5">
+          <input name="Phone Number" type="text" class="form-control" placeholder="Phone Number" required maxlength="10">
+          <input name="Email" type="text" class="form-control" placeholder="Email address" required minlength="3" maxlength="64">
+          <input name="resume" type="file" accept=".pdf" class="form-control" placeholder="Upload Resume" required>
+          <button class="btn btn-lg btn-primary btn-finished" onclick="showAlert()" type="submit">Finished</button>
+        </form>
+      <hr>
+    </script>
+
+    <script>
+      function showAlert() {
+        // Creates a JSON obj of the values
+        var formStuff = ($("form").serializeArray());
+        var arr = "";
+        // For each field (value that user has input)...do this
+        formStuff.forEach(function(e) {
+          if (e.value != "") {
+            arr += `${e.name}: ${e.value}\n`;
+          }
+        });
+        window.alert(`Your Application has been successfully submitted!\n${arr}`);
+        event.preventDefault();
+      };
+    </script>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Macy's TECH</a>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Teams & Roles<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Life at Macy's Technology<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search for Roles">
+            </form>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="big-container">
+      <!-- <h1> Macy's UI Job Listings will be injected here! </h1> -->
+    </div>
+    </body>
+</html>
