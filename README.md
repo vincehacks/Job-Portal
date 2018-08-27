@@ -7,3 +7,5 @@ to display any number of jobs which have a job title and job description.
 Backbone logic is implemented to display HTML/CSS/JS. Once the user clicks on
 the finished button, they will see an alert with the information they had filled
 out!
+
+![](https://github.com/vincehacks/Job-Portal/blob/master/screenshots/1.png)
