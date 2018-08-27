@@ -9,3 +9,5 @@ the finished button, they will see an alert with the information they had filled
 out!
 
 ![](https://github.com/vincehacks/Job-Portal/blob/master/screenshots/1.png)
+![](https://github.com/vincehacks/Job-Portal/blob/master/screenshots/2.png)
+![](https://github.com/vincehacks/Job-Portal/blob/master/screenshots/3.png)
